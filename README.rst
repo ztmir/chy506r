@@ -7,7 +7,8 @@ Dependencies
 
 Requires Python >= 3.4
 Requires Gnuplot
-Requires python-serial module
+Requires python3-serial module
+Requires python3-tk module
 
 Examples
 ````````
