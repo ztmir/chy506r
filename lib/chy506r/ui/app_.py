@@ -64,18 +64,18 @@ class App(tk.Frame, metaclass=_AppMeta):
         self.master.destroy()
 
     def update_widgets(self):
-        self._controller.update_widgets()
+        self.controller.update_widgets()
         self._update_status_bar()
 
     def _create_components(self):
         self._input_chooser = InputChooser(self, updatecommand=self.update_widgets)
         self._output_chooser = OutputChooser(self, updatecommand=self.update_widgets)
-        self._controller = Controller(self, updatecommand=self.update_widgets, input_chooser=self._input_chooser, output_chooser=self.output_chooser)
+        self._controller = Controller(self, updatecommand=self.update_widgets, input_chooser=self.input_chooser, output_chooser=self.output_chooser)
         self._status_bar = tk.Label(self, text="Idle", bd=1, relief=tk.SUNKEN, anchor=tk.W)
         # layout
-        self._input_chooser.pack(expand=True, fill=tk.BOTH)
-        self._output_chooser.pack(expand=True, fill=tk.BOTH)
-        self._controller.pack(expand=True, fill=tk.BOTH)
+        self.input_chooser.pack(expand=True, fill=tk.BOTH)
+        self.output_chooser.pack(expand=True, fill=tk.BOTH)
+        self.controller.pack(expand=True, fill=tk.BOTH)
         self._status_bar.pack(expand=True, fill=tk.BOTH)
 
     def _update_status_bar(self):
