@@ -146,8 +146,7 @@ class Controller(tk.Frame):
         else:
             if self.device is not None and not self.device.done:
                 messagebox.showwarning("Warning", "Measurements aborted. " +
-                                       "It looks like a timeout occurred. " +
-                                       "Did you connect the device to PC?")
+                                       "Is the device connected to PC?")
     @classmethod
     def _image_data(self):
         return images_.spinning_gear

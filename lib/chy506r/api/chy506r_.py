@@ -102,7 +102,7 @@ class Chy506R(threading.Thread):
                             self._done = True
                             break
                 if not self._done:
-                    sys.stderr.write("warning: timeout occurred, is the device connected to your PC?\n")
+                    sys.stderr.write("warning: communication aborted, is the device connected to PC?\n")
             except KeyboardInterrupt:
                 pass
             finally:
