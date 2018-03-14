@@ -5,10 +5,10 @@ Python application for CHY506R thermometer.
 Dependencies
 ````````````
 
-Requires Python >= 3.4
-Requires Gnuplot
-Requires python3-serial module
-Requires python3-tk module
+- Python >= 3.4
+- Gnuplot
+- python3-serial module
+- python3-tk module
 
 Examples
 ````````
